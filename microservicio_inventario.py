@@ -24,9 +24,10 @@ def recibir_ventas():
     q_producto = datos_venta.get("q_producto")
     monto_total = datos_venta.get("monto_total")
 
+    #tratamiento de la factura
+
     resultados_venta = []
     for producto_id, cantidad in zip(id_producto, q_producto):
-        # Agregar el id del producto y la cantidad adquirida a la lista de resultados
         resultados_venta.append({
             "producto_id": producto_id,
             "cantidad": int(cantidad)
